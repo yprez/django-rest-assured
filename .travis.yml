@@ -78,6 +78,7 @@ matrix:
   fast_finish: true
 
 install:
+  - if [[ $TOX_ENV == py32* ]]; then pip install pip\<8.0.0 virtualenv\<14.0.0; fi
   - pip install tox
 
 script:
