@@ -76,13 +76,13 @@ class MockTestCase(BaseRESTAPITestCase):
 class StuffSerializer(serializers.ModelSerializer):
     class Meta:
         model = Stuff
-        fields = ['name']
+        fields = ['id', 'name', 'answer']
 
 
 class StuffHyperlinkedSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Stuff
-        fields = ['name']
+        fields = ['name', 'answer', 'url']
 
 
 class RelatedStuffSerializer(serializers.ModelSerializer):
